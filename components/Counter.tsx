@@ -9,8 +9,10 @@ const Counter = () => {
             <Text style={styles.heading}>Counter APP</Text>
             <Text style={styles.subheading}>Count: {count}</Text>
             <Button title="Increment" onPress={()=>setCounter(count+1)}/>
-            <View style={styles.spacing}></View>
+            <View style={styles.spacing} />
             <Button title="Decrement" onPress={()=>setCounter(count-1)}/>
+            <View style={styles.spacing} />
+            <Button title="Reset" onPress={() => setCounter(0)} />
         </View>
     )
 }
