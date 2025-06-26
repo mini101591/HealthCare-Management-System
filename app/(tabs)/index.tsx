@@ -1,11 +1,15 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text} from "react-native";
 import Counter from "@/components/Counter";
+import React, { useState } from 'react';
+import TaskInput from "@/components/TaskInput";
 
 
+function App(){
 
-export default function App(){
   return (<View style={styles.container}>
-    <Counter />
+    {/* <Counter /> */}
+    <Text style={styles.title}>To-Do List</Text>
+    <TaskInput />
   </View>)
 }
 
@@ -13,8 +17,15 @@ export const styles = StyleSheet.create({
   container:{
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: 'plum',
     padding:60
-  }  
+  },
+   title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    alignSelf: 'center',
+  },
 });
 
+export default App;
